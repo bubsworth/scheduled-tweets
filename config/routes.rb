@@ -15,5 +15,8 @@ Rails.application.routes.draw do
 
   delete "log_out", to: "sessions#destroy"
 
+  get "password/reset", to: "password_resets#new"
+  post "password/reset", to: "password_resets#create"
+
   root to: "main#index"
 end
