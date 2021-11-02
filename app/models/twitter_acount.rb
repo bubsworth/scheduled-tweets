@@ -3,4 +3,5 @@ class TwitterAcount < ApplicationRecord
   belongs_to :user
 
   # Validations
+  validates :username, uniqueness: true
 end
