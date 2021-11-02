@@ -1,4 +1,4 @@
-class TwitterAcount < ApplicationRecord
+class TwitterAccount < ApplicationRecord
   # Associations
   belongs_to :user
 
