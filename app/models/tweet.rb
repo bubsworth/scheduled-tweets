@@ -7,7 +7,14 @@ class Tweet < ApplicationRecord
   validates :body, length: { minimum: 1, maximum: 280 }
   validates :publish_at, presence: true
 
+
+  # Methods
+
   after_initialize do
     self.publish_at ||= 24.hour.from_now
   end 
+
+  def published?
+    tweet_id?
+  end
 end
